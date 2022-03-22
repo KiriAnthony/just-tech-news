@@ -3,7 +3,7 @@ const {Comment} = require('../../models');
 
 router.get('/', (req, res) => {
     // Access our user model and run .findAll() method
-    Comment.findAll({})
+    Comment.findAll()
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
             console.log(err);
